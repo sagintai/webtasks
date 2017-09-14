@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+th, td {
+	border: 1px solid #333;
+}
+
+td {
+	padding: 20px 0;
+}
+
+th {
+	text-align: left;
+	height: 100px;
+}
