@@ -1,0 +1,47 @@
+.menu a {
+	color: green;
+}
+
+.item {
+	margin: 15px 0;
+	border: 2px solid red;
+	border-radius: 5px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.item img {
+	float: left;
+	width: 90px;
+	margin: 0 10px;
+}
+
+.text_for {
+	font-weight: bold;
+	margin: 0 10px;
+}
+
+.price {
+	color: green;
+	background: pink;
+	font-size: 25px;
+}
+
+.title a {
+	font-size: 25px;
+}
+
+.description {
+	margin: 10px 3px/;
+	font-size: 21px;
+	font-style: arial;
+}
+
+.city {
+	font-weight: bold;
+}
+
+.urgent {
+	background-color: yellow;
+}
