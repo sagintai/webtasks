@@ -1,0 +1,101 @@
+<html>
+
+  <head>
+    <head>
+	<style>
+		  .card {
+        border: 1px solid blue;
+        margin-bottom: 10px;
+        display: flex;
+        padding: 5px;
+      }
+
+
+      .info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+
+      .price {
+        position: absolute;
+        bottom: 0px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .info a {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .card {
+          height: 40px;
+          display: flex;
+          padding: 0;
+        }
+        
+        .card img {
+            display: none;
+        }
+
+        .desc {
+          display: none;
+        }
+
+        .info {
+          width: 100%;
+          position: relative;
+          display: flex;
+          margin: 0;
+        }
+
+        .info a {
+          font-size: 20px;
+          position: absolute;
+          width: 40%;
+          left: 0;
+        }
+
+        .price {
+          font-size: 30px;
+          position: absolute;
+          right: 0; 
+        }
+
+      }
+
+
+	</style>
+    </head>
+  </head>
+
+  <body>
+    <div class="card first">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">Mercedes C100</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+    <div class="card">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">BMW X5</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+    <div class="card">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">Audi A8</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+  </body>
+
+</html>
