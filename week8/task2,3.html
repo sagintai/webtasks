@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      #cards .card{
+        border:1px solid red;
+        display:flex;
+        width:300px;
+      }
+      #cards .card .title{
+        flex-grow: 1;
+      }
+      #cards .card .price{
+        font-weight: bold;
+        padding-right: 20px;
+      }
+      #loading{
+        display: none;
+      }
+      #cards{
+        width:300px;
+        height:200px;
+        border: 1px solid blue;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <button>Load</button>
+    <div>
+      <button id="sortByMaker">Sort by maker</button>
+      <button id="sortByPrice">Sort by price</button>
+    </div>
+    <div id="cards">
+      <img width="300px" height="200px" id="loading" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+    </div>
+
+
+    <script defer>
+    	let resp;
+
+		function load() {
+    		fetch("http://demo4296963.mockable.io/listCars").then(function(response) {
+    			return response.json().then(onsuccess);
+    		});
+    	}
+
+    	function maker() {
+    		resp.sort((a,b) => a.maker.localeCompare(b.maker));
+    		append();
+    	}
+
+    	function price() {
+    		resp.sort((a,b) => a.price.localeCompare(b.price));
+    		append();
+    	}
+
+    	function append() {
+			document.querySelector("#cards").innerHTML = "";    		
+    		for(let i = 0; i < resp.length; i++) {
+    			let div = document.createElement("div");
+    			div.style.border = "1px solid red";
+    			let name = resp[i]["maker"] + " " + resp[i]["model"];
+    			let price = resp[i]["price"]
+    			let p1 = document.createElement("p");
+    			let p2 = document.createElement("p");
+    			p1.style.margin = 0;
+    			p2.style.margin = 0;
+    			p1.innerHTML = name;
+    			p2.innerHTML = price;
+    			div.style.display = "flex";
+    			div.style.justifyContent = "space-between";
+    			div.appendChild(p1);
+    			div.appendChild(p2);
+
+    			document.querySelector("#cards").appendChild(div);
+    		}
+    	}
+
+    	function onsuccess(response) {
+    		resp = response;
+    		for(let i = 0; i < resp.length;i++) {
+    			resp[i].price += "";
+    		}
+    		append();
+    	}
+
+		document.querySelector("button").addEventListener("click", load);
+		document.querySelector("#sortByMaker").addEventListener("click", maker);
+		document.querySelector("#sortByPrice").addEventListener("click", price);
+    </script>
+  </body>
+
+</html>
