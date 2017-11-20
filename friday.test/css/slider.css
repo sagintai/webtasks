@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+.slider {
+	margin: 50px 0;
+	height: auto;
+}
+
+.slider h1 {
+	font-family: 'Abel', sans-serif;	
+}
+
+#slider {
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	height: 300px;
+	margin: 20px auto;
+	padding: 0;
+	list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+
+	.slider h1 {
+		font-size: 23px;	
+	}
+
+	.slider {
+		height: 300px;
+	}
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 1s ease-in;
+	left: 0;
+}
+
+.slide img {
+	width: 100%;
+	height: auto;
+}
+
+.arrows {
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
+	height: 20px;
+}
+
+.arrow {
+	position: absolute;
+	cursor: pointer;
+
+}
+
+.no_active {
+	display: none;
+}
+
+.next {
+	right: 0;
+}

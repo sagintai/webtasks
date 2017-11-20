@@ -1,0 +1,71 @@
+.profile {
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 75px;
+}
+
+.user {
+	display: flex;
+	padding: 10px;
+	margin: 50px 0;
+}
+
+.user_img {
+	margin-right: 8%;
+	width: 35%;
+}
+
+.user span {
+	font-weight: normal;
+	margin-left: 5%; 
+}
+
+.user_inf {
+	width: 100%;
+	line-height: 150%;
+	background: #fff;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.inf_name {
+	display: inline-block;
+	width: 100px;
+	font-weight: bold;
+}
+
+#name {
+	font-weight: bold;
+	font-size: 23px;
+	}
+
+.inf_log {
+	text-decoration: underline;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 790px){
+	.user {
+		display: block;
+	}
+	
+	.user_img {
+		width: 100%;
+	}
+
+	.user *{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.user {
+		margin-top: 150px;
+	}
+
+	.user_fav h1{
+		font-size: 20px;
+	}
+}
